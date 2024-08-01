@@ -1,0 +1,48 @@
+.admin-bar .pageWrapper {
+  flynt-component[name="NavigationMain"] {
+    @apply top-8;
+  }
+}
+flynt-component[name="NavigationMain"] {
+  @apply absolute top-0 z-50 w-full bg-transparent;
+  --navigation-height: 80px;
+  block-size: var(--navigation-height);
+  display: none;
+  font-size: var(--font-size-body-small);
+  color: #fff;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    display: block;
+  }
+
+  .navigation {
+    block-size: var(--navigation-height);
+    inset-block-start: 0;
+    inset-inline: 0;
+
+    .admin-bar & {
+      inset-block-start: var(--wp-admin--admin-bar--height);
+    }
+
+    .menu {
+      .item {
+        &.current-menu-item {
+          a {
+            @apply text-white font-semibold;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    block-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 16px;
+  }
+
+  @import "Partials/logo";
+  @import "Partials/menu";
+}

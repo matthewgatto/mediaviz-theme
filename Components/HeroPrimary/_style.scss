@@ -1,0 +1,75 @@
+.admin-bar .pageWrapper {
+  flynt-component[name="HeroPrimary"] {
+    min-height: calc(100vh - var(--wp-admin--admin-bar--height));
+  }
+}
+flynt-component[name="HeroPrimary"] {
+  @apply bg-primary min-h-screen flex items-center justify-center text-white relative max-w-full overflow-hidden lg:py-40;
+  .title {
+    @apply text-white text-6xl leading-tight font-normal;
+
+    del {
+      text-decoration: unset;
+      // create a line through the text
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block-start: 35%;
+        inset-inline-start: 0;
+        block-size: 55%;
+        inline-size: 100%;
+        background: rgba(156, 201, 255, 0.36);
+      }
+    }
+  }
+  .hero-image {
+    @apply mx-auto;
+    width: 31rem;
+  }
+
+  .ellipses {
+    position: relative;
+    display: contents;
+    .ellipse {
+      position: absolute;
+      border-radius: 972.821px;
+      background: linear-gradient(
+        180deg,
+        rgba(192, 238, 245, 0.32) 0%,
+        rgba(194, 238, 216, 0.32) 100%
+      );
+      filter: blur(161.3000030517578px);
+      width: 958.037px;
+      height: 972.821px;
+      flex-shrink: 0;
+      &:nth-child(1) {
+        right: -25%;
+        top: -65%;
+        transform: rotate(26.916deg);
+      }
+      &:nth-child(2) {
+        left: 29%;
+        top: 0%;
+        border-radius: 819.479px;
+        background: rgba(104, 174, 255, 0.55);
+        filter: blur(161.3000030517578px);
+        width: 807.026px;
+        height: 819.479px;
+        transform: rotate(26.916deg);
+        flex-shrink: 0;
+      }
+      &:nth-child(3) {
+        left: -50%;
+        bottom: -55%;
+        border-radius: 972.821px;
+        background: linear-gradient(
+          180deg,
+          rgba(128, 222, 236, 0.32) 0%,
+          rgba(194, 255, 225, 0.32) 90%
+        );
+        filter: blur(161.3000030517578px);
+      }
+    }
+  }
+}

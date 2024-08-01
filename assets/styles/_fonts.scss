@@ -1,0 +1,36 @@
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-stretch: 1% 500%;
+  font-style: normal;
+  font-weight: 1 1000;
+  src: url("../assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Italic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/Libre_Baskerville/LibreBaskerville-Bold.ttf")
+    format("truetype");
+}

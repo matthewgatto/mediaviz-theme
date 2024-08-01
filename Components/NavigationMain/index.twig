@@ -1,0 +1,18 @@
+<flynt-component load:on="idle" load:on:media="(min-width: 1024px)" name="NavigationMain">
+	<nav class="navigation" aria-label="{{ labels.ariaLabel|e }}">
+		<div class="container">
+			<div class="flex space-x-4">
+				{% include 'Partials/_logo.twig' with {'logo': logo, 'site': site} only %}
+				{% if menu %}
+					<div>
+						{% include 'Partials/_menu.twig' with {'items': menu.items} only %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="flex items-center space-x-3">
+				<a href="#!" class="px-3 text-white">Login</a>
+				<a href="#!" class="px-5 py-2 bg-white rounded text-secondary">Request Demo</a>
+			</div>
+		</div>
+	</nav>
+</flynt-component>

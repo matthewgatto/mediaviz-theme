@@ -1,0 +1,36 @@
+flynt-component[name="BlockCalculation"] {
+  @apply py-10 lg:py-20 lg:px-16 bg-[#d6e9fd] bg-opacity-15;
+  min-height: 38rem;
+
+  .title {
+    @apply text-5xl font-normal leading-tight;
+    del {
+      text-decoration: unset;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block-start: 35%;
+        inset-inline-start: 0;
+        block-size: 55%;
+        inline-size: 104%;
+        background: #deeafe;
+        z-index: -1;
+        left: -2%;
+      }
+    }
+  }
+  .subtitle {
+    @apply text-xl text-gray;
+  }
+
+  .result {
+    @apply font-medium font-body;
+    font-size: 152px;
+    background: linear-gradient(0deg, #569acc, 100%, #7992d1 100%),
+      linear-gradient(90deg, #569acc 0%, #7992d1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

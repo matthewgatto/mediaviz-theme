@@ -1,0 +1,6 @@
+.btn {
+  @apply px-4 py-2 font-semibold flex items-center space-x-2 justify-center;
+  &.btn-link {
+    @apply text-warning;
+  }
+}

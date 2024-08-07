@@ -1,0 +1,40 @@
+<flynt-component name="SliderFeatures" load:on="visible">
+	<script type="application/json">{{ jsonData|json_encode }}</script>
+	<div class="mx-auto slider-features-container">
+		<div class="container relative z-10 flex flex-col overflow-hidden space-y-7">
+			<div class="flex flex-col space-y-5 text-center">
+				<span class="title">{{ title }}</span>
+				<h1 class="subtitle">{{ subtitle }}</h1>
+				<span class="desc">{{ description }}</span>
+			</div>
+
+			{% if features %}
+				<div>
+					<div data-ref="featureSliders" class="relative swiper swiper-container lg:mt-10">
+						<div class="swiper-wrapper">
+							{% for feature in features %}
+								<div class="slider-item swiper-slide">
+									<img class="w-full figure-image lazyload" src="{{ feature.preview }}" alt="{{ feature.preview.alt|e }}">
+								</div>
+							{% endfor %}
+						</div>
+						<div class="swiper-scrollbar"></div>
+						<button type="button" data-ref="prev" class="slider-button slider-button--prev" aria-label="{{ sliderOptions.a11y.prevSlideMessage|e }}"></button>
+						<button type="button" data-ref="next" class="slider-button slider-button--next" aria-label="{{ sliderOptions.a11y.nextSlideMessage|e }}"></button>
+					</div>
+				</div>
+				<div class="grid gap-5 lg:grid-cols-3">
+					{% for feature in features %}
+						<div class="flex flex-col px-3 space-y-3">
+							<h3 class="text-lg font-semibold font-body">{{ feature.title }}</h3>
+							<span class="text-gray">{{ feature.description }}</span>
+							<div>
+								<a href="{{ feature.link }}" class="px-5 py-2.5 font-semibold rounded bg-secondary text-white border-[#86B7FF] mt-4 inline-block">Learn More</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</flynt-component>

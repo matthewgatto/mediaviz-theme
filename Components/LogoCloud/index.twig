@@ -1,0 +1,22 @@
+<flynt-component name="LogoCloud">
+	<div class="logo-cloud-container">
+		<div class="container relative z-10 flex flex-col text-center space-y-7 lg:mx-10">
+			<h1 class="title">{{ title }}</h1>
+			{% include "Partials/CTA.twig" %}
+
+			<div class="logos">
+				{% for logo in logos %}
+					<div class="logo">
+						{% if logo.link %}
+							<a href="{{ logo.link }}">
+								<img src="{{ logo.logo }}" alt="{{ logo.name }}">
+							</a>
+						{% else %}
+							<img src="{{ logo.logo }}" alt="{{ logo.name }}">
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</flynt-component>

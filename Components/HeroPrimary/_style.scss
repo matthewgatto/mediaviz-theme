@@ -5,6 +5,7 @@
 }
 flynt-component[name="HeroPrimary"] {
   @apply bg-primary min-h-screen flex items-center justify-center text-white relative max-w-full overflow-hidden lg:py-40;
+
   .title {
     @apply text-white text-6xl leading-tight font-normal;
 

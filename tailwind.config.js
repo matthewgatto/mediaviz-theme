@@ -9,7 +9,9 @@ export default {
       colors: {
         primary: "#003268",
         secondary: "#4A85DD",
+        warning: "#FF6846",
         dark: "#00162D",
+        gray: "#64626A",
       },
       borderRadius: {
         DEFAULT: "6px",

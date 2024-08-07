@@ -1,0 +1,10 @@
+{% if cta_text %}
+	<a href="{{cta_link.url}}" class="btn btn-{{ cta_theme }} text-lg">
+		<span>{{ cta_text }}</span>
+		{% if cta_show_arrow %}
+			<svg xmlns="http://www.w3.org/2000/svg" width="7" height="13" viewbox="0 0 7 13" fill="none">
+				<path d="M1.05811 11.9302L6.05811 6.43018L1.05811 0.930176" stroke="currentColor" stroke-width="2"/>
+			</svg>
+		{% endif %}
+	</a>
+{% endif %}

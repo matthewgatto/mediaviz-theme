@@ -1,0 +1,109 @@
+flynt-component[name="SliderFeatures"] {
+  @apply py-10 lg:py-20 lg:mx-16;
+  min-height: 38rem;
+
+  .slider-features-container {
+    .title {
+      @apply font-semibold text-lg text-warning;
+    }
+    .subtitle {
+      @apply text-center text-5xl font-normal;
+      line-height: 70px;
+      del {
+        text-decoration: unset;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          inset-block-start: 35%;
+          inset-inline-start: 0;
+          block-size: 55%;
+          inline-size: 104%;
+          background: #deeafe;
+          z-index: -1;
+          left: -2%;
+        }
+      }
+    }
+    .desc {
+      @apply text-center text-xl;
+      color: #64626a;
+    }
+
+    .swiper {
+      height: 426px;
+      background-color: #d9d9d9;
+
+      .slider-button {
+        @apply text-warning;
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        inset-block-start: 50%;
+        justify-content: center;
+        position: absolute;
+        translate: 0 -50%;
+        z-index: 10;
+
+        &::before {
+          block-size: 100%;
+          border-radius: 50%;
+          content: "";
+          inline-size: 100%;
+          inset-block-start: 0;
+          inset-inline-start: 0;
+          position: absolute;
+          transition: opacity 0.2s ease;
+          will-change: opacity;
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+
+        &--prev {
+          inset-inline-start: 15px;
+
+          &::after {
+            block-size: 1.25em;
+            border-block-start: 2px solid currentColor;
+            border-inline-start: 2px solid currentColor;
+            content: "";
+            inline-size: 1.25em;
+            margin-inline-start: calc(0.25em + 2px);
+            rotate: -45deg;
+          }
+        }
+
+        &--next {
+          inset-inline-end: 15px;
+
+          &::after {
+            block-size: 1.25em;
+            border-block-start: 2px solid currentColor;
+            border-inline-end: 2px solid currentColor;
+            content: "";
+            inline-size: 1.25em;
+            margin-inline-end: calc(0.25em - 2px);
+            rotate: 45deg;
+          }
+        }
+      }
+      .swiper-scrollbar {
+        @apply w-full left-0 bottom-0;
+        opacity: 1 !important;
+        height: 3px;
+
+        .swiper-scrollbar-drag {
+          @apply bg-warning;
+        }
+      }
+
+      .figure-image {
+        @apply w-full object-cover;
+        height: 426px;
+      }
+    }
+  }
+}

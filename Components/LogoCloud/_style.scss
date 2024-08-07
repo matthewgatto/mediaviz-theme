@@ -1,0 +1,35 @@
+flynt-component[name="LogoCloud"] {
+  @apply flex items-center justify-center border-b;
+  min-height: 38rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/images/base.svg");
+    width: 100%;
+    height: 90px;
+    top: -90px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .logo-cloud-container {
+    .title {
+      @apply text-center text-5xl font-normal;
+      line-height: 70px;
+    }
+
+    .logos {
+      @apply grid grid-cols-5 lg:mt-24 mt-8 gap-5 lg:gap-10;
+      .logo {
+        @apply flex items-center justify-center;
+        img {
+          @apply object-contain;
+          max-width: 200px;
+          max-height: 52px;
+        }
+      }
+    }
+  }
+}
